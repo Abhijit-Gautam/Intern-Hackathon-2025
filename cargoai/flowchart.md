@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     A[Email Folder] --> B[Email Parser]
     B --> C[Extract Metadata]
@@ -26,3 +27,4 @@ graph TD
     N --> O[Save JSON Output]
     N --> P[Web Interface]
     P --> Q[User Confirmation]
+```
