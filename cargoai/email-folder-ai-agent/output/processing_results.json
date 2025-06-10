@@ -1,0 +1,174 @@
+[
+  {
+    "email_filename": "newsletter.eml",
+    "summary": {
+      "email_metadata": {
+        "sender": "('Veritasium (via Patreon)', 'no-reply@patreon.com')",
+        "subject": "\"How One Company Secretly Poisoned The Planet - our latest video, ad-free!\"\n and 2 more",
+        "date": "2025-06-05 18:25:00",
+        "filename": "newsletter.eml"
+      },
+      "email_summary": "\"How One Company Secretly Poisoned The Planet - our latest video, ad-free!\" and 2 more Body: Monthly update: Catch up on posts from The Girl's Bathroom Veritasium Catch up on this month's top posts from Veritasium. Upgrade to unlock Why it's impossible to throw a perfect spiral... Upgrade to unlock Want to see more from this creator?",
+      "document_summaries": [],
+      "key_entities": [
+        "from",
+        "this",
+        "upgrade",
+        "unlock",
+        "more",
+        "catch",
+        "posts",
+        "veritasium",
+        "latest",
+        "history"
+      ],
+      "total_attachments": 0,
+      "processed_documents": 0
+    },
+    "output_file": "summary_newsletter.eml.json"
+  },
+  {
+    "email_filename": "respond.eml",
+    "summary": {
+      "email_metadata": {
+        "sender": "('Suhas Badagi', 'suhasbadagi2023@vahanischolarship.com')",
+        "subject": "Accepted: Innovation hub visit @ Sat 24 May 2025 10:30am - 12pm (IST)\n (Abhijit Gautam)",
+        "date": "2025-05-16 08:29:32",
+        "filename": "respond.eml"
+      },
+      "email_summary": "Suhas Badagi has accepted this invitation. organiser abhijit Gautam is organising a new innovation hub. he has accepted the invitation. he has also accepted the invitation.",
+      "document_summaries": [
+        {
+          "filename": "invite.ics",
+          "content_type": "application/ics",
+          "summary": "BEGIN:VCALENDAR PRODID:-//Google Inc//Google Calendar 70.9054//EN VERSION:2.0 CALSCALE:GREGORIAN METHOD:REPLY BEGIN:VEVENT DTSTART:20250524T050000Z DTEND:20250524T063000Z DTSTAMP:20250516T082932Z ORGANIZER;CN=Abhijit Gautam:mailto:a",
+          "word_count": 46
+        }
+      ],
+      "key_entities": [
+        "this",
+        "india",
+        "invitation",
+        "calendar",
+        "suhas",
+        "badagi",
+        "visit",
+        "pinnacle",
+        "central",
+        "bellary"
+      ],
+      "total_attachments": 1,
+      "processed_documents": 1
+    },
+    "output_file": "summary_respond.eml.json"
+  },
+  {
+    "email_filename": "sample.eml",
+    "summary": {
+      "email_metadata": {
+        "sender": "('', 'test@example.com')",
+        "subject": "Test Email with Attachment",
+        "date": "2025-06-10 10:00:00",
+        "filename": "sample.eml"
+      },
+      "email_summary": "this is a test email with an attachment. Please process this email and extract the summary.",
+      "document_summaries": [],
+      "key_entities": [
+        "this",
+        "test",
+        "email",
+        "with",
+        "please",
+        "process",
+        "extract",
+        "best",
+        "sender"
+      ],
+      "total_attachments": 0,
+      "processed_documents": 0
+    },
+    "output_file": "summary_sample.eml.json"
+  },
+  {
+    "email_filename": "sample1.eml",
+    "summary": {
+      "email_metadata": {
+        "sender": "('Poonam Mehdiratta', 'Programs-India@weconnectinternational.org')",
+        "subject": "REMINDER : EMPOWERING INCLUSION SUMMIT: 27 FEB  : THE LALIT ASHOK\n HOTEL, BENGALURU",
+        "date": "2024-02-26 03:44:56",
+        "filename": "sample1.eml"
+      },
+      "email_summary": "we are looking forward to your valued participation and presence at the Empowering Inclusion India Summit. we are looking forward to your valued participation and presence at the Empowering Inclusion India Summit.",
+      "document_summaries": [
+        {
+          "filename": "image001.png",
+          "content_type": "image/png",
+          "summary": "Document contains minimal text or could not be processed.",
+          "word_count": 0
+        },
+        {
+          "filename": "image002.jpg",
+          "content_type": "image/jpeg",
+          "summary": "Document contains minimal text or could not be processed.",
+          "word_count": 0
+        },
+        {
+          "filename": "Agenda- Advancing Sustainable Value Chains Summit- India 2024.pdf",
+          "content_type": "application/pdf",
+          "summary": "WEConnect International host an \"Inclusive Supply Chain Summit\" with three in person events aligned with the program's objectives. the summit will feature experts in critical emerging industry sectors such as IT, semiconductors, pharmaceuticals.",
+          "word_count": 1542
+        }
+      ],
+      "key_entities": [
+        "international",
+        "weconnect",
+        "business",
+        "women",
+        "inclusive",
+        "global",
+        "india",
+        "chains",
+        "government",
+        "supplier"
+      ],
+      "total_attachments": 3,
+      "processed_documents": 3
+    },
+    "output_file": "summary_sample1.eml.json"
+  },
+  {
+    "email_filename": "Thank you note.eml",
+    "summary": {
+      "email_metadata": {
+        "sender": "('Abhijit Gautam', 'gautamabhijit491@gmail.com')",
+        "subject": "Fwd: Thank you note",
+        "date": "2023-11-10 12:17:02",
+        "filename": "Thank you note.eml"
+      },
+      "email_summary": "thank you note to: preeti Bhatia preeti.bhatia@vahanischolarship.com>, Rashmani Singh  rashmani@vahanischolarship.com>, Mariya Ansari  mariya.ansari@vahanischolarship.com>.",
+      "document_summaries": [
+        {
+          "filename": "Happy Diwali.png",
+          "content_type": "image/png",
+          "summary": "Document contains minimal text or could not be processed.",
+          "word_count": 0
+        }
+      ],
+      "key_entities": [
+        "your",
+        "parents",
+        "khushnuma",
+        "perween",
+        "thank",
+        "singh",
+        "meet",
+        "making",
+        "time",
+        "join"
+      ],
+      "total_attachments": 1,
+      "processed_documents": 1
+    },
+    "output_file": "summary_Thank you note.eml.json"
+  }
+]

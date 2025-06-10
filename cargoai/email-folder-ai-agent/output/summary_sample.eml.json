@@ -1,0 +1,23 @@
+{
+  "email_metadata": {
+    "sender": "('', 'test@example.com')",
+    "subject": "Test Email with Attachment",
+    "date": "2025-06-10 10:00:00",
+    "filename": "sample.eml"
+  },
+  "email_summary": "this is a test email with an attachment. Please process this email and extract the summary.",
+  "document_summaries": [],
+  "key_entities": [
+    "this",
+    "test",
+    "email",
+    "with",
+    "please",
+    "process",
+    "extract",
+    "best",
+    "sender"
+  ],
+  "total_attachments": 0,
+  "processed_documents": 0
+}

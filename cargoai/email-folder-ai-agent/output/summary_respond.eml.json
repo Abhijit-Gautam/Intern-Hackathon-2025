@@ -1,0 +1,31 @@
+{
+  "email_metadata": {
+    "sender": "('Suhas Badagi', 'suhasbadagi2023@vahanischolarship.com')",
+    "subject": "Accepted: Innovation hub visit @ Sat 24 May 2025 10:30am - 12pm (IST)\n (Abhijit Gautam)",
+    "date": "2025-05-16 08:29:32",
+    "filename": "respond.eml"
+  },
+  "email_summary": "Suhas Badagi has accepted this invitation. organiser abhijit Gautam is organising a new innovation hub. he has accepted the invitation. he has also accepted the invitation.",
+  "document_summaries": [
+    {
+      "filename": "invite.ics",
+      "content_type": "application/ics",
+      "summary": "BEGIN:VCALENDAR PRODID:-//Google Inc//Google Calendar 70.9054//EN VERSION:2.0 CALSCALE:GREGORIAN METHOD:REPLY BEGIN:VEVENT DTSTART:20250524T050000Z DTEND:20250524T063000Z DTSTAMP:20250516T082932Z ORGANIZER;CN=Abhijit Gautam:mailto:a",
+      "word_count": 46
+    }
+  ],
+  "key_entities": [
+    "this",
+    "india",
+    "invitation",
+    "calendar",
+    "suhas",
+    "badagi",
+    "visit",
+    "pinnacle",
+    "central",
+    "bellary"
+  ],
+  "total_attachments": 1,
+  "processed_documents": 1
+}

@@ -1,0 +1,10 @@
+From: test@example.com
+To: recipient@example.com
+Subject: Test Email with Attachment
+Date: Mon, 10 Jun 2025 10:00:00 +0000
+
+This is a test email with an attachment.
+Please process this email and extract the summary.
+
+Best regards,
+Test Sender

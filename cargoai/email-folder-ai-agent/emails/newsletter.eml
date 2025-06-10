@@ -1,0 +1,1291 @@
+Delivered-To: gautamabhijit0803@gmail.com
+Received: by 2002:a17:504:6dc3:b0:1cc1:564d:664 with SMTP id op3csp464074njc;
+        Thu, 5 Jun 2025 11:25:00 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFbZoWgaluFSeHzbe6UHJ+sVJ/5ifCl8UwOSYSuGDbm3Fh7OYs5sKoGSnYFH8zTaHungc51
+X-Received: by 2002:a05:620a:6412:b0:7c5:4d2e:4d2d with SMTP id af79cd13be357-7d2298d83d2mr90275585a.50.1749147900601;
+        Thu, 05 Jun 2025 11:25:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1749147900; cv=none;
+        d=google.com; s=arc-20240605;
+        b=GMYQI+sh4nJm0c+jmpPZlHg7L5H0BkSxgxqj6U/VZo8SKJSGnuSLUO9DE8Dp7oPvKG
+         oHWzCOZv3qE05QVCunTsWYj0tNLYetlRh0XadzXUyVxbN6ua+4saj0U1EFvwlr40I5/Q
+         VR/iVO7C7GDGZ2J4+rosS75MU4taVgZdI9lfhEf78BAG/MjpTIMsRwLlrsA+5Dhl7y9C
+         XnFMaH6z860kl2sCmwdw7U2vKbjoAtd0qQJ2zvc7TeF0IkSTw2uuQ3TfMLI9Z5BSf0Yp
+         8NzV8m7jHxfc8vcP3BQUS/HLCyPl/n9UBv5qPOH+gx+zYjzcRBzn9vevJCHhhaPZfv5a
+         8R7g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:message-id:list-unsubscribe
+         :list-unsubscribe-post:reply-to:to:from:subject:mime-version:date
+         :dkim-signature:dkim-signature;
+        bh=Ee5/lVHBxOg3ugK7jBzn4mUT2h3cCh0HSq2Jtwh+cs8=;
+        fh=H8dl5yuGZPq58Hpqz4t98CLMnFDkiQM0u3hl23xrOeU=;
+        b=LCF4HTnp6+TUo+r1LBtKHQQz886G06ymQ+HWByTdTlBjkFTTbi4XrtY9u3NvHXgEu9
+         GyqjGIJkPTu0q0PntOP6mzWzqAs2QyKLQwW4nZUs+F0czZZeo29FDmftJ8Mx3zQF6J9l
+         c+OiYPbU1Fdg6T2cq4HQYd/9WasFbKJ7z+HRDKI86iMnN67rbdX1Rrb0Cfvg3WkNL0cX
+         cax4EXeRiGMnUJM8pwwSP2Ek2aCSXmBl79zldtdnQR9ZYo0FFZhdX7UjJoCxNBHX3TnF
+         2GmJJbOxrj+gNojsscuPK5vD6tqxZe8ddElSulFTizw0d7LqiQF3SzHkizfvMsmf8YjO
+         E5rw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mailgun.patreon.com header.s=krs header.b=gZcQuvLk;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=Kc7U3gPC;
+       spf=pass (google.com: domain of bounce+c881f0.e05498-gautamabhijit0803=gmail.com@mailgun.patreon.com designates 143.55.229.105 as permitted sender) smtp.mailfrom="bounce+c881f0.e05498-gautamabhijit0803=gmail.com@mailgun.patreon.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=patreon.com
+Return-Path: <bounce+c881f0.e05498-gautamabhijit0803=gmail.com@mailgun.patreon.com>
+Received: from a229-105.mailgun.net (a229-105.mailgun.net. [143.55.229.105])
+        by mx.google.com with UTF8SMTPS id af79cd13be357-7d24b3cb0e6si3154785a.79.2025.06.05.11.25.00
+        for <gautamabhijit0803@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 05 Jun 2025 11:25:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+c881f0.e05498-gautamabhijit0803=gmail.com@mailgun.patreon.com designates 143.55.229.105 as permitted sender) client-ip=143.55.229.105;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mailgun.patreon.com header.s=krs header.b=gZcQuvLk;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=Kc7U3gPC;
+       spf=pass (google.com: domain of bounce+c881f0.e05498-gautamabhijit0803=gmail.com@mailgun.patreon.com designates 143.55.229.105 as permitted sender) smtp.mailfrom="bounce+c881f0.e05498-gautamabhijit0803=gmail.com@mailgun.patreon.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=patreon.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.patreon.com; q=dns/txt; s=krs; t=1749147900; x=1749155100;
+ h=Content-Transfer-Encoding: Content-Type: Message-Id: List-Unsubscribe: List-Unsubscribe-Post: Reply-To: To: To: From: From: Subject: Subject: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=Ee5/lVHBxOg3ugK7jBzn4mUT2h3cCh0HSq2Jtwh+cs8=;
+ b=gZcQuvLkbyaaEEu0xGZr+XoQIcTM0IK7ITHQTjtF8w84GchG/DlY14v3mKzvAt57p8HphZhfPPKxXJmKqdCjXbadXecACKC0HhnVoKpNl4Ib9uiaA3TmunQRlQUFQuUPkwI7Fllnsm/bI1NfGedcSM30kAmpNcnb+5JSCvjyN84=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1749147900; x=1749155100;
+ h=Content-Transfer-Encoding: Content-Type: Message-Id: List-Unsubscribe: List-Unsubscribe-Post: Reply-To: To: To: From: From: Subject: Subject: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=Ee5/lVHBxOg3ugK7jBzn4mUT2h3cCh0HSq2Jtwh+cs8=;
+ b=Kc7U3gPC2f9EoamVsj/aKLb06B4iva8PPBTEl+1lHQ2KpzCinF6pYu/kGF+x2aN7oub7Dtho+bjmEDckjVPvePk35f0oMXOIMIG+9IBTpkGDY/2+QGHLS8eCc0VNh+Asikru0etFPg9FR0YrsDiKz/faxOPBVi1TVFAMIVdXY78=
+X-Mailgun-Sid: WyJjY2QzMSIsImdhdXRhbWFiaGlqaXQwODAzQGdtYWlsLmNvbSIsImUwNTQ5OCJd
+X-Feedback-Id: postmaster@mailgun.patreon.com:template_freememberdigest:5b8f05ca4f41fe0001aec40e:mailgun
+Received: by 4d88f51fc51d with HTTP id 6841e0fcd9d0d6a1f069d814; Thu, 05 Jun 2025
+ 18:25:00 GMT
+X-Mailgun-Sending-Ip-Pool-Name: 
+X-Mailgun-Sending-Ip-Pool: 
+X-Mailgun-Sending-Ip: 143.55.229.105
+Date: Thu, 05 Jun 2025 18:25:00 +0000
+Mime-Version: 1.0
+Subject: "How One Company Secretly Poisoned The Planet - our latest video, ad-free!"
+ and 2 more
+From: "Veritasium (via Patreon)" <no-reply@patreon.com>
+To: gautamabhijit0803@gmail.com
+X-Mailgun-Tag: template_freememberdigest
+X-Mailgun-Track-Clicks: false
+X-Mailgun-Track-Opens: true
+X-Mailgun-Rewrite-Sender-Header: false
+Reply-To: no-reply@mailgun.patreon.com
+X-Patreon-UUID: 200bcd7a-f27d-48a4-9b80-b87cf6e3c51e
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <https://webhooks.patreon.com/email-unsubscribe?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGQiOiJaMEZCUVVGQlFtOVJaVVE0WDBaNWRETXhUVTR4VVV4MmVXeDBWaTF0T1cxRWVGbFlYMDFOV2pCYWVYRTRibXR4VEd0WFdHdzNWMjVTVVVkNVRHdGhXVzgzYkc1NWFpMW1XR2gzWkV4dVVsOVpibVEwYnpOTVVEaDNaV05JWWpGUGNYUlpiakJZV2paRWMzaE9SbTF4VkZWNmFtcEpkMXA2ZHpOVFZsVmtWbHB1Y2t4eVUyTk5abGd0VGpaeWJXZGFhbHBZVFhKWk9VcEhVMFJRYzFsRVVuWTFZbFo2ZDBKNE9USkpSRVZtU0d0c1VVaFpkbFZhUm10Nk9UWlpVMncxY0ZwemNtVlVVVXAzUXpkVWVXRlVXV05TVVRCeVpXUkZVa28wUzBoWVVtWmpWM05aVkVsdFVrVlBWWGRZU1VOeFFrWjBjMHhUYlZJM09GUlZSSFpJY0ZGMlNYRTROVkV0V0dwMVNVTnFjVWhuU0ZWUWQzZHhPRlJWY2s5ak1UZFRhbWRVUm5sR2QxZHhjRE5HYkRjNGNtaEtXV2Q0UTNSeE9HOWZNV3RJZEZWdFFVMWZXbUZTVm05WWFYRmpUbGR0U0UxcFJGVk1VR016V0dRMFJsUjVWbVYyUldvelprRm5WbDkwYkhaeGVHeEhRVVYwYTJKVGVubFVVbmxhY0hRemQzWXRjRmhaU3pZeExVMVBkek5DWTI5cmVraDRNa2xVU2tKclRuRlNPWFYzWWtoM1ZXUTBhVFJuTW5WRFNuWmlVMU41UjNCRFExaG9SMU5RYzFkSGFIQlhWVGhNVDJzd2JWUXhaWFkwWlVoa0xXbFlXbkZKV1ZsYVVsZE9UakIzT0hndFFsWnhSamc0V1hwZlR6ZFRVWGxGZEVzeFFUaGxRMDk2WDBZMk16QjVTVGMwTWt0YWIyNUZXbkp3VTNWSVQzWjFVVFZTVDNSWVZXbHdaVmhRYjJScVYweHRUeTEwWnpoMGRIWkJjVU14UTFGNGFXbHJQUT09In0.GxNktjj_Uff2h1Dn6tzev2anQ6yYSXnsWufLomaLd8M>
+X-Mailgun-Variables: {"batch_id": "0e1e3821-5bc4-4465-9f3d-b89fcbf919fa", "bulk_mode": "0",
+ "campaign_id": "70092", "comma_separated_post_ids":
+ "129007907,130407667,129753597", "custom_nonce":
+ "FreeMemberDigest:131221917:6:2025", "domain_override":
+ "mailgun.patreon.com", "email_campaign_name": "transactional", "email_id":
+ "1d73e47e-08bb-47f9-becc-9f8ef08c0a7a", "email_notif_campaign_id": "70092",
+ "email_notif_type": "campaign_email_top_post_updates", "email_priority":
+ "low_priority", "email_system": "email-service-nunjucks", "is_high_priority":
+ "0", "rate_limits": "[]", "recipient_size_bucket": "1", "recipient_type":
+ "user", "should_channel_throttle": "False", "should_ml_throttle": "True",
+ "task_id": "200bcd7a-f27d-48a4-9b80-b87cf6e3c51e", "template_name":
+ "freememberdigest", "user_id": "163118294"}
+Message-Id: <20250605182500.d1a4770c8955e1bc@mailgun.patreon.com>
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office" dir=3D"ltr"><head>
+<title>Monthly update: Catch up on posts from The Girl's Bathroom</title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+<style type=3D"text/css">
+#outlook a{padding: 0;}
+=2EReadMsgBody{width: 100%;}
+=2EExternalClass{width: 100%;}
+=2EExternalClass *{line-height: 100%;}
+body{margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%;}
+table, td{border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt;}
+img{border: 0; height: auto; line-height: 100%; outline: none; text-decorat=
+ion: none; -ms-interpolation-mode: bicubic;}
+p{display: block; margin: 13px 0;}
+</style>
+<!--[if mso]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+<!--[if lte mso 11]>
+<style type=3D"text/css">
+=2Eoutlook-group-fix{width:100% !important;}
+</style>
+<![endif]-->
+<style type=3D"text/css">=20
+@media only screen and (max-width: 480px) {
+=2Edys-desktop { display: none !important; }
+div.dys-mobile { display: block !important; }
+tr.dys-mobile { display: table-row !important; }=20
+}
+</style>
+ <style type=3D"text/css">
+@media only screen and (min-width:480px) {
+=2Edys-column-per-100 {
+width: 100.000000% !important;
+max-width: 100.000000%;
+}
+=2Edys-column-per-12 {
+width: 12% !important;
+max-width: 12%;
+}
+=2Edys-column-per-20 {
+width: 20% !important;
+max-width: 20%;
+}
+=2Edys-column-per-45 {
+width: 45% !important;
+max-width: 45%;
+}
+=2Edys-column-per-50 {
+width: 50.000000% !important;
+max-width: 50.000000%;
+}
+=2Edys-column-per-55 {
+width: 55% !important;
+max-width: 55%;
+}
+=2Edys-column-per-68 {
+width: 68% !important;
+max-width: 68%;
+}
+=2Edys-column-px-250 {
+width: 250px !important;
+max-width: 250px;
+}
+=2Edys-column-px-318 {
+width: 318px !important;
+max-width: 318px;
+}
+}
+</style>
+<style type=3D"text/css">
+@media only screen and (max-width:480px) {
+ table.full-width-mobile { width: 100% !important; }
+td.full-width-mobile { width: auto !important; }
+}
+u + #body a {color: #000000;text-decoration: underline;font-size: inherit; =
+font-family: inherit; font-weight: inherit; line-height: inherit; }
+ a {color: #000000;text-decoration: underline;}
+ @font-face {
+ font-family: "Oracle";
+ src: url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Light=
+=2Ewoff2")
+ format("woff2"),
+ url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Light.woff=
+")
+ format("woff");
+ font-weight: 200;
+ font-style: normal;
+ }
+ @font-face {
+ font-family: "Oracle";
+ src: url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Book.=
+woff2")
+ format("woff2"),
+ url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Book.woff"=
+)
+ format("woff");
+ font-weight: 400;
+ font-style: normal;
+ }
+ @font-face {
+ font-family: "Oracle";
+ src: url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Mediu=
+m.woff2")
+ format("woff2"),
+ url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Medium.wof=
+f")
+ format("woff");
+ font-weight: 700;
+ font-style: normal;
+ }
+ @font-face {
+ font-family: "OracleLight";
+ src: url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Light=
+=2Ewoff2")
+ format("woff2"),
+ url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Light.woff=
+")
+ format("woff");
+ font-weight: 400;
+ font-style: normal;
+ }
+ @font-face {
+ font-family: "OracleLight";
+ src: url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Book.=
+woff2")
+ format("woff2"),
+ url("https://c5.patreon.com/external/fonts/oracle/PatreonOracle-Book.woff"=
+)
+ format("woff");
+ font-weight: 700;
+ font-style: normal;
+ }
+ @font-face {
+ font-family: "OracleTriple";
+ src: url("https://c5.patreon.com/external/fonts/oracle/PatreonOracleTriple=
+-Regular.woff2")
+ format("woff2"),
+ url("https://c5.patreon.com/external/fonts/oracle/PatreonOracleTriple-Regu=
+lar.woff")
+ format("woff");
+ font-weight: 400;
+ font-style: normal;
+ }
+ /* darkmode button support */
+ .dm-pbtn table tbody tr td{
+ background-image:linear-gradient(#ffffff,#ffffff) !important;
+background: transparent !important;=20
+ }
+ .dm-sbtn table tbody tr td{
+ background-image:linear-gradient(#ffffff,#ffffff) !important;
+ box-shadow: 0 0px 3px #fff;
+ }
+ /* darkmode button support targets outlook.com */
+ [data-ogsb] .dm-sbtn table tbody tr td{
+ border: 1px solid #feffff;
+ outline: 1px solid #feffff;=20
+ }=20
+ img {
+ max-width:570px;=20
+ }
+ @media only screen and (min-width:440px) {
+ .icon-text > div {
+ padding-top:8px !important;
+ }
+ }
+ @media only screen and (max-width:440px) {
+ .icon-col {
+ vertical-align: top !important;
+ }
+ .icon-text {
+ padding-top: 0px !important;
+ }
+ .icon-img {
+ padding-top: 5px !important;
+ }
+ }
+ @media only screen and (min-width: 480px) {
+ .title-overflow-width { max-width: 520px !important;}
+ .title-overflow-width-
+ { max-width: 320px !important;}
+ .audio-padding > table > tbody > tr > td {padding-left: 20px !important;}
+ }
+ @media only screen and (max-width: 480px) {
+ .a-text {padding-left: 0px !important;}
+ .a-icon {padding-left: 0px !important;}
+ }
+ .post {
+ border: 1px solid #e5e3dd;
+ border-radius: 8px;
+ }
+ @media only screen and (max-width: 480px) {
+ .collection-title-overflow-width { max-width: 320px !important;}
+ }
+ @media only screen and (min-width: 480px) {
+ .collection-title-overflow-width { max-width: 260px !important;}
+ }
+=20
+</style>
+
+
+</head>
+<body id=3D"body" style=3D"background-color: #FFFFFF;"><div style=3D"backgr=
+ound-color: #FFFFFF;">
+=20
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:30px 16px 0;text-align:center;vertical-align:top;"><!--[if mso =
+| IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:middle;width:568px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:middle;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"vertical-align:middle;" width=3D"100%=
+">
+ <tbody><tr><td><div>
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on">
+ <tbody>
+ <tr>
+ <td style=3D"max-width:40px;" width=3D"40">
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" style=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr><td s=
+tyle=3D"width:30px;"><a href=3D"https://www.patreon.com/veritasium?utm_camp=
+aign=3Dfree_member_digest&amp;utm_source=3Dcampaign_link&amp;utm_id=3D1d73e=
+47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medium=3Demail" style=3D"color:#000=
+000;text-decoration:underline;" target=3D"_blank"><span style=3D"color:#000=
+000;text-decoration:underline;"><img height=3D"auto" src=3D"https://c10.pat=
+reonusercontent.com/4/patreon-media/p/campaign/70092/2e31720981e9452ca9f9e0=
+cbf1c74d2f/eyJ3IjoyMDB9/1.jpg?token-hash=3D6j96SplTcYObe7tf7sJBrnBvkbCwNf9H=
+oErON2Ra0QM%3D" style=3D"border:none;display:block;font-size:13px;height:au=
+to;outline:none;text-decoration:none;width:100%;" width=3D"30"></span></a><=
+/td></tr></tbody></table>
+ </td>
+ <td style=3D"padding-left:8px;" width=3D"235">
+ <div style=3D"color:#000000;font-family:'Oracle', sans-serif;font-size:16p=
+x;font-weight:300;letter-spacing:0.8px;line-height:22.4px;text-align:left;"=
+>
+ <a href=3D"https://www.patreon.com/veritasium?utm_campaign=3Dfree_member_d=
+igest&amp;utm_source=3Dcampaign_link&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9=
+f8ef08c0a7a&amp;utm_medium=3Demail" style=3D"text-decoration:none;color:#00=
+0000;"><span style=3D"text-decoration:none;color:#000000;">Veritasium</span=
+></a>
+ </div>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </div></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding=
+-top:16px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;wor=
+d-break:break-word;"><h2 style=3D"color:#000000;font-family:'Oracle', sans-=
+serif;font-size:33px;font-weight:300;line-height:1.2;margin:0;padding:0;tex=
+t-align:left;">Catch up on this month's top posts from Veritasium</h2></td>=
+</tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px 0px;padding-bottom:0px;padding-left:0px;padding-right:0px;=
+padding-top:0px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;wor=
+d-break:break-word;"><div style=3D"color:#000000;font-family:'Oracle', sans=
+-serif;font-size:15px;font-weight:300;letter-spacing:0.32px;line-height:21p=
+x;text-align:left;"><p style=3D"margin-top:0;margin-bottom:0"></p></div></t=
+d></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+=20
+=20
+=20
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:20px 0;padding-left:16px;padding-right:16px;padding-top:16px;te=
+xt-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exac=
+tly;">
+<![endif]--><!--[if mso | IE]>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"post-outlook" style=3D"width:568px;" width=3D"568"><tr><td style=3D"=
+line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div class=3D"post" style=3D"margin:0px auto;max-width:568px;">=
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"direction=
+:ltr;font-size:0px;padding:0px;text-align:center;vertical-align:top;"><!--[=
+if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exac=
+tly;">
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:568px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"center" style=3D"font-size:0px;padding:0;word-brea=
+k:break-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"border-collapse:collapse;border-spacing:0px;"><t=
+body><tr><td style=3D"width:568px;"><a href=3D"https://www.patreon.com/post=
+s/how-one-company-129007907?utm_campaign=3Dfree_member_digest&amp;utm_sourc=
+e=3Dpost_link&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_med=
+ium=3Demail" style=3D"color:#000000;text-decoration:underline;" target=3D"_=
+blank"><span style=3D"color:#000000;text-decoration:underline;"><img height=
+=3D"auto" src=3D"https://image.mux.com/BOEtlsk1ah601rVhb01Pb00J01bd6zuvMtU1=
+8iXmoMIiCaM/thumbnail.jpg?token=3DeyJhbGciOiJSUzI1NiIsImtpZCI6Ik5CY3o3Sk5Rc=
+UNmdDdWcmo5MWhra2lEY3Vyc2xtRGNmSU1oSFUzallZMDI0IiwidHlwIjoiSldUIn0.eyJzdWIi=
+OiJCT0V0bHNrMWFoNjAxclZoYjAxUGIwMEowMWJkNnp1dk10VTE4aVhtb01JaUNhTSIsImV4cCI=
+6MTc1MTc2MDAwMCwiYXVkIjoidCIsIndpZHRoIjo2MjAsImZpdF9tb2RlIjoicHJlc2VydmUiLC=
+J0aW1lIjoyLjB9.OoNisFY7nfbzKhlb5z8NHntP5LymG5shz-IIgryKqRWUlkq9lW5aFIeUgUMr=
+4BmqghB4yZ9GUj_Yggn_3RTLZPQYYZ-CiVEyoZO8wa2c-tXMXd_k2dtHUIvub3xZlslixXOhvlk=
+dHN5hygZIHEsR9REKFfdfsG6ZbCVK0UaYl40KaXAPOfgfVRMzEQXkJWdjX4uzne6LkDax42XqDs=
+_qR1LQtsoyV28VvDbMPqnQsa64TCZ5gEP0tbltFZmznykXn67h9z2zQ5U5vB6GBOn7PAwa95tjE=
+dNjM9ZV2ZwiG79WAzFj2_x42UnKgLujf9hPvjzVRF6_w1Al3P-AW5w6GQ" style=3D"border:=
+none;border-radius:8px 8px 0px 0px;display:block;font-size:13px;height:auto=
+;outline:none;text-decoration:none;width:100%;" width=3D"568"></span></a></=
+td></tr></tbody></table></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;pad=
+ding-bottom:0px;padding-top:20px;word-break:break-word;"><h2 style=3D"color=
+:#000000;font-family:'Oracle', sans-serif;font-size:22px;font-weight:bold;l=
+ine-height:31.2px;margin:0;padding:0;text-align:left;">
+ <a class=3D"title-overflow-width" href=3D"https://www.patreon.com/posts/ho=
+w-one-company-129007907?utm_campaign=3Dfree_member_digest&amp;utm_source=3D=
+post_link&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medium=
+=3Demail" style=3D"text-decoration:none;color:#000000;overflow:hidden;max-w=
+idth:260px;text-overflow:ellipsis;white-space:nowrap;display:block;"><span =
+style=3D"text-decoration:none;color:#000000;">
+ How One Company Secretly Poisoned The Planet - our latest video, ad-free!
+ </span></a>
+ </h2></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" class=3D"text-dots-overflow" style=3D"font-s=
+ize:0px;padding:10px 16px;padding-bottom:0px;padding-top:10px;word-break:br=
+eak-word;"><div style=3D"color:#000000;font-family:'Oracle', sans-serif;fon=
+t-size:14px;font-weight:300;letter-spacing:-1%;line-height:19.6px;text-alig=
+n:left;">
+ The history of Teflon and exposing the biggest chemical cover up in histor=
+y - that has polluted the entire global water system and led to po...
+ </div></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+=20
+ <tbody><tr><td><div>
+ <table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"margin:12px 0px 24px 12px;">
+ <tbody>
+ <tr>
+ <td>
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" style=3D"border-collapse:separate;line-height:100%;"><tbody><tr><td ali=
+gn=3D"center" bgcolor=3D"#000000" role=3D"presentation" style=3D"background=
+:#000000;border:1px solid #FFFFFF;border-color:#FFFFFF;border-radius:8px;cu=
+rsor:auto;mso-padding-alt:10px 20px 10px 16px;" valign=3D"middle"><a class=
+=3D"dys-button-a" href=3D"https://www.patreon.com/checkout/veritasium?rid=
+=3D376&amp;ref_post_id=3D129007907&amp;utm_campaign=3Dfree_member_digest&am=
+p;utm_source=3Dupgrade_link&amp;redirect_uri=3D%2Fposts%2Fhow-one-company-1=
+29007907&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medium=
+=3Demail" style=3D"background:#000000;border-radius:8px;color:#FFFFFF;displ=
+ay:inline-block;font-family:'Oracle', sans-serif;font-size:16px;font-weight=
+:500;line-height:18px;margin:0;mso-padding-alt:0px;padding:10px 20px 10px 1=
+6px;text-decoration:none;text-transform:none;" target=3D"_blank">
+ <img height=3D"13" src=3D"https://c5.patreon.com/external/email/icons/lock=
+_white_with_border.png" style=3D"padding-bottom:0px;vertical-align: middle;=
+width:20px;height:20px;" width=3D"12">&nbsp;&nbsp;Upgrade to unlock
+ </a></td></tr></tbody></table>
+ </td>
+=20
+ </tr>
+ </tbody>
+ </table>
+ </div></td></tr>
+=20
+=20
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<![endif]--><!--[if mso | IE]>
+<![endif]--><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+=20
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"post-outlook" style=3D"width:568px;" width=3D"568"><tr><td style=3D"=
+line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div class=3D"post" style=3D"margin:0px auto;max-width:568px;">=
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"direction=
+:ltr;font-size:0px;padding:0px;text-align:center;vertical-align:top;"><!--[=
+if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exac=
+tly;">
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:568px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"center" style=3D"font-size:0px;padding:0;word-brea=
+k:break-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"border-collapse:collapse;border-spacing:0px;"><t=
+body><tr><td style=3D"width:568px;"><a href=3D"https://www.patreon.com/post=
+s/why-its-to-throw-130407667?utm_campaign=3Dfree_member_digest&amp;utm_sour=
+ce=3Dpost_link&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_me=
+dium=3Demail" style=3D"color:#000000;text-decoration:underline;" target=3D"=
+_blank"><span style=3D"color:#000000;text-decoration:underline;"><img heigh=
+t=3D"auto" src=3D"https://image.mux.com/34ey4xZBt02N3if1FLzae00z8TZFWnFduJp=
+WYbr8OxK9s/thumbnail.jpg?token=3DeyJhbGciOiJSUzI1NiIsImtpZCI6Ik5CY3o3Sk5RcU=
+NmdDdWcmo5MWhra2lEY3Vyc2xtRGNmSU1oSFUzallZMDI0IiwidHlwIjoiSldUIn0.eyJzdWIiO=
+iIzNGV5NHhaQnQwMk4zaWYxRkx6YWUwMHo4VFpGV25GZHVKcFdZYnI4T3hLOXMiLCJleHAiOjE3=
+NTE3NjAwMDAsImF1ZCI6InQiLCJ3aWR0aCI6NjIwLCJmaXRfbW9kZSI6InByZXNlcnZlIiwidGl=
+tZSI6My4wfQ.abb4QY0GAAT4UvNQDspUinBsbPzDIxdgTukQYmnWeZOBAHgQNkLOlZQkV21ghMf=
+lK_AibIvdCACqYXzntN_AF1wLrb8sYocibcA70X1l5m-bgNxt0iYYou-A3PzcEzgULtvqopxOyP=
+QpoiEyKIN-YrBQE4u-3iDo45ruTmSfuAckJJw5FoDw6-n9_DcYQAuNi-SLnGz7TJXTba9zUs0zL=
+mAo_tRXqgZ5gmwfnjhe2-OqEzvkxA5_29oUO74mTcehswS1dD54aIabjkRJh7mlMKu9ZDxz1RS5=
+jZRIuurM5GYeqX6RdLu6evqSVmNq6Opd9XDtDUh4jKhYVBYGF0k38A" style=3D"border:non=
+e;border-radius:8px 8px 0px 0px;display:block;font-size:13px;height:auto;ou=
+tline:none;text-decoration:none;width:100%;" width=3D"568"></span></a></td>=
+</tr></tbody></table></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;pad=
+ding-bottom:0px;padding-top:20px;word-break:break-word;"><h2 style=3D"color=
+:#000000;font-family:'Oracle', sans-serif;font-size:22px;font-weight:bold;l=
+ine-height:31.2px;margin:0;padding:0;text-align:left;">
+ <a class=3D"title-overflow-width" href=3D"https://www.patreon.com/posts/wh=
+y-its-to-throw-130407667?utm_campaign=3Dfree_member_digest&amp;utm_source=
+=3Dpost_link&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medi=
+um=3Demail" style=3D"text-decoration:none;color:#000000;overflow:hidden;max=
+-width:260px;text-overflow:ellipsis;white-space:nowrap;display:block;"><spa=
+n style=3D"text-decoration:none;color:#000000;">
+ Why It's Impossible to Throw a Perfect Spiral (ft. Tom Brady) - our latest=
+ video, ad-free!=20
+ </span></a>
+ </h2></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" class=3D"text-dots-overflow" style=3D"font-s=
+ize:0px;padding:10px 16px;padding-bottom:0px;padding-top:10px;word-break:br=
+eak-word;"><div style=3D"color:#000000;font-family:'Oracle', sans-serif;fon=
+t-size:14px;font-weight:300;letter-spacing:-1%;line-height:19.6px;text-alig=
+n:left;">
+ Even the GOAT Tom Brady can=E2=80=99t throw a perfect spiral....
+ </div></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+=20
+ <tbody><tr><td><div>
+ <table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"margin:12px 0px 24px 12px;">
+ <tbody>
+ <tr>
+ <td>
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" style=3D"border-collapse:separate;line-height:100%;"><tbody><tr><td ali=
+gn=3D"center" bgcolor=3D"#000000" role=3D"presentation" style=3D"background=
+:#000000;border:1px solid #FFFFFF;border-color:#FFFFFF;border-radius:8px;cu=
+rsor:auto;mso-padding-alt:10px 20px 10px 16px;" valign=3D"middle"><a class=
+=3D"dys-button-a" href=3D"https://www.patreon.com/checkout/veritasium?rid=
+=3D376&amp;ref_post_id=3D130407667&amp;utm_campaign=3Dfree_member_digest&am=
+p;utm_source=3Dupgrade_link&amp;redirect_uri=3D%2Fposts%2Fwhy-its-to-throw-=
+130407667&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medium=
+=3Demail" style=3D"background:#000000;border-radius:8px;color:#FFFFFF;displ=
+ay:inline-block;font-family:'Oracle', sans-serif;font-size:16px;font-weight=
+:500;line-height:18px;margin:0;mso-padding-alt:0px;padding:10px 20px 10px 1=
+6px;text-decoration:none;text-transform:none;" target=3D"_blank">
+ <img height=3D"13" src=3D"https://c5.patreon.com/external/email/icons/lock=
+_white_with_border.png" style=3D"padding-bottom:0px;vertical-align: middle;=
+width:20px;height:20px;" width=3D"12">&nbsp;&nbsp;Upgrade to unlock
+ </a></td></tr></tbody></table>
+ </td>
+=20
+ </tr>
+ </tbody>
+ </table>
+ </div></td></tr>
+=20
+=20
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<![endif]--><!--[if mso | IE]>
+<![endif]--><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+=20
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" cl=
+ass=3D"post-outlook" style=3D"width:568px;" width=3D"568"><tr><td style=3D"=
+line-height:0px;font-size:0px;mso-line-height-rule:exactly;">
+<![endif]--><div class=3D"post" style=3D"margin:0px auto;max-width:568px;">=
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"direction=
+:ltr;font-size:0px;padding:0px;text-align:center;vertical-align:top;"><!--[=
+if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exac=
+tly;">
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:568px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"center" style=3D"font-size:0px;padding:0;word-brea=
+k:break-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"border-collapse:collapse;border-spacing:0px;"><t=
+body><tr><td style=3D"width:568px;"><a href=3D"https://www.patreon.com/post=
+s/wip-video-with-129753597?utm_campaign=3Dfree_member_digest&amp;utm_source=
+=3Dpost_link&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medi=
+um=3Demail" style=3D"color:#000000;text-decoration:underline;" target=3D"_b=
+lank"><span style=3D"color:#000000;text-decoration:underline;"><img height=
+=3D"auto" src=3D"https://image.mux.com/gNIV00ps00ea25Aqk5CE02t0075EqvJm8IfU=
+BsDGy4uVSbk/thumbnail.jpg?token=3DeyJhbGciOiJSUzI1NiIsImtpZCI6Ik5CY3o3Sk5Rc=
+UNmdDdWcmo5MWhra2lEY3Vyc2xtRGNmSU1oSFUzallZMDI0IiwidHlwIjoiSldUIn0.eyJzdWIi=
+OiJnTklWMDBwczAwZWEyNUFxazVDRTAydDAwNzVFcXZKbThJZlVCc0RHeTR1VlNiayIsImV4cCI=
+6MTc1MTc2MDAwMCwiYXVkIjoidCIsIndpZHRoIjo2MjAsImZpdF9tb2RlIjoicHJlc2VydmUiLC=
+J0aW1lIjoyLjB9.mtOPmQy_Z3yxzeubUJWUAQwZyYmT9NJ-HXQFFWPflstTbrto9sk7JUjzlnnL=
+4dwD9EsZJRWRAOqZCakiHr_gFG-K2p27d3nYcwwqk6hZC8rDSDDI1iB3AlngH0-EgX34TZ3wl0F=
+cAZ_yPfsCqqaaStf76FIdJXvyTfsgnYgu8idEMUM_HDUwbSCZZvM8oFkXTmDvyN25mHAys-Rl6v=
+vaQIurMXW7ZeQNkyG8kLhEBJycoMxHgpZhqTLzp4pW1GQpBJ57o3DCphyP38DMztYwXJukOdKXN=
+zN14b9xwiZIRNVGRFkNtr676CZ0ryGa1cF1GxNhyKWSJuBw7Ceih_CPqQ" style=3D"border:=
+none;border-radius:8px 8px 0px 0px;display:block;font-size:13px;height:auto=
+;outline:none;text-decoration:none;width:100%;" width=3D"568"></span></a></=
+td></tr></tbody></table></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;pad=
+ding-bottom:0px;padding-top:20px;word-break:break-word;"><h2 style=3D"color=
+:#000000;font-family:'Oracle', sans-serif;font-size:22px;font-weight:bold;l=
+ine-height:31.2px;margin:0;padding:0;text-align:left;">
+ <a class=3D"title-overflow-width" href=3D"https://www.patreon.com/posts/wi=
+p-video-with-129753597?utm_campaign=3Dfree_member_digest&amp;utm_source=3Dp=
+ost_link&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medium=
+=3Demail" style=3D"text-decoration:none;color:#000000;overflow:hidden;max-w=
+idth:260px;text-overflow:ellipsis;white-space:nowrap;display:block;"><span =
+style=3D"text-decoration:none;color:#000000;">
+ WIP video with Tom Brady =E2=80=94&nbsp;Kindly Requesting Feedback!
+ </span></a>
+ </h2></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" class=3D"text-dots-overflow" style=3D"font-s=
+ize:0px;padding:10px 16px;padding-bottom:0px;padding-top:10px;word-break:br=
+eak-word;"><div style=3D"color:#000000;font-family:'Oracle', sans-serif;fon=
+t-size:14px;font-weight:300;letter-spacing:-1%;line-height:19.6px;text-alig=
+n:left;">
+ Coming soon: a video about the mystery of how an American football flies. =
+It seems like a simple question=E2=80=94but the real answer wasn=E2=80=99t =
+uncover...
+ </div></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0px 12px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:544px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+=20
+ <tbody><tr><td><div>
+ <table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"margin:12px 0px 24px 12px;">
+ <tbody>
+ <tr>
+ <td>
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" style=3D"border-collapse:separate;line-height:100%;"><tbody><tr><td ali=
+gn=3D"center" bgcolor=3D"#000000" role=3D"presentation" style=3D"background=
+:#000000;border:1px solid #FFFFFF;border-color:#FFFFFF;border-radius:8px;cu=
+rsor:auto;mso-padding-alt:10px 20px 10px 16px;" valign=3D"middle"><a class=
+=3D"dys-button-a" href=3D"https://www.patreon.com/checkout/veritasium?rid=
+=3D376&amp;ref_post_id=3D129753597&amp;utm_campaign=3Dfree_member_digest&am=
+p;utm_source=3Dupgrade_link&amp;redirect_uri=3D%2Fposts%2Fwip-video-with-12=
+9753597&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medium=3D=
+email" style=3D"background:#000000;border-radius:8px;color:#FFFFFF;display:=
+inline-block;font-family:'Oracle', sans-serif;font-size:16px;font-weight:50=
+0;line-height:18px;margin:0;mso-padding-alt:0px;padding:10px 20px 10px 16px=
+;text-decoration:none;text-transform:none;" target=3D"_blank">
+ <img height=3D"13" src=3D"https://c5.patreon.com/external/email/icons/lock=
+_white_with_border.png" style=3D"padding-bottom:0px;vertical-align: middle;=
+width:20px;height:20px;" width=3D"12">&nbsp;&nbsp;Upgrade to unlock
+ </a></td></tr></tbody></table>
+ </td>
+=20
+ </tr>
+ </tbody>
+ </table>
+ </div></td></tr>
+=20
+=20
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<![endif]--><!--[if mso | IE]>
+<![endif]--><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:568px;" width=3D"568"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:568px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+=20
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px 0px;padding-bottom:0px;padding-left:0px;padding-right:0px;=
+padding-top:10px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">=20
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;wor=
+d-break:break-word;"><h1 style=3D"color:#000000;font-family:'Oracle', sans-=
+serif;font-size:21px;font-weight:300;line-height:26px;margin:0;padding:0;te=
+xt-align:left;"><span>Want to see more from this creator?</span></h1></td><=
+/tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px 0px;padding-bottom:0px;padding-left:0px;padding-right:0px;=
+padding-top:0px;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;wor=
+d-break:break-word;"><div style=3D"color:#000000;font-family:'Oracle', sans=
+-serif;font-size:16px;font-weight:300;letter-spacing:0.32px;line-height:22.=
+4px;text-align:left;"><p style=3D"margin-top:0;margin-bottom:0"><span>Explo=
+re more posts, see what other members are saying, and more on Patreon.</spa=
+n></p></div></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+=20
+=20
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:0;text-align:center;vertical-align:top;"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;wor=
+d-break:break-word;" vertical-align=3D"middle"><table border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border-collapse:=
+separate;line-height:100%;"><tbody><tr><td align=3D"center" bgcolor=3D"#397=
+6d7" role=3D"presentation" style=3D"background:#3976d7;border:1px solid tra=
+nsparent;border-color:#3976d7;border-radius:8px;cursor:auto;mso-padding-alt=
+:10px 25px;" valign=3D"middle"><a class=3D"dys-button-a" href=3D"https://ww=
+w.patreon.com/veritasium?utm_campaign=3Dfree_member_digest&amp;utm_source=
+=3Dcampaign_link&amp;utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_=
+medium=3Demail" style=3D"background:#3976d7;border-radius:8px;color:#FFFFFF=
+;display:inline-block;font-family:'Oracle', sans-serif;font-size:16px;font-=
+weight:700;line-height:20px;margin:0;mso-padding-alt:0px;padding:10px 25px;=
+text-decoration:none;text-transform:none;" target=3D"_blank">Go to Patreon<=
+/a></td></tr></tbody></table></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+=20
+=20
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px 0px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"center" style=3D"font-size:0px;padding:10px 16px;w=
+ord-break:break-word;"><p style=3D"border-top-color:#cccccc;border-top-styl=
+e:solid;border-top-width:1px;font-size:1px;margin:0px auto;width:100%;"></p=
+><!--[if mso | IE]><table align=3D'center' border=3D'0' cellpadding=3D'0' c=
+ellspacing=3D'0' role=3D'presentation' style=3D'border-top-color:#cccccc;bo=
+rder-top-style:solid;border-top-width:1px;font-size:1px;margin:0px auto;wid=
+th:568px;' width=3D'568px'><tr><td style=3D'height:0;line-height:0;'>&nbsp<=
+/td></tr></table><![endif]--></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px 0px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:middle;width:330px;">
+<![endif]--><div class=3D"dys-column-per-55 outlook-group-fix" style=3D"dir=
+ection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-ali=
+gn:middle;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"vertical-align:middle;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;pad=
+ding-bottom:0;word-break:break-word;"><div style=3D"color:#000000;font-fami=
+ly:'Oracle', sans-serif;font-size:24px;font-weight:350;letter-spacing:-0.48=
+px;line-height:120%;text-align:left;">
+ Get the Patreon App
+ </div></td></tr>
+ <tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;padding-to=
+p:0;word-break:break-word;"><div style=3D"color:#777777;font-family:'Oracle=
+', sans-serif;font-size:16px;font-weight:325;letter-spacing:-0.16px;line-he=
+ight:140%;text-align:left;"></div></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td><td style=3D"vertical-align:middle;width:270px;">
+<![endif]--><div class=3D"dys-column-per-45 outlook-group-fix" style=3D"dir=
+ection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-ali=
+gn:middle;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"padding-le=
+ft:16px;padding-right:16px;vertical-align:middle;"><table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"" width=3D"1=
+00%">
+ <tbody><tr><td><div>
+ <table align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" sty=
+le=3D"margin:0 auto; padding-right:16px;">
+ <tbody>
+ <tr>
+ <td>
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" style=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr><td s=
+tyle=3D"width:118px;"><a href=3D"https://apps.apple.com/us/app/patreon/id10=
+44456188" style=3D"color:#000000;text-decoration:underline;" target=3D"_bla=
+nk"><span style=3D"color:#000000;text-decoration:underline;"><img alt=3D"Do=
+wnload on the App Store" height=3D"auto" src=3D"https://c5.patreon.com/exte=
+rnal/email/notify-new-post/badge_appstore@2x.png" style=3D"border:none;disp=
+lay:block;font-size:13px;height:auto;outline:none;text-decoration:none;widt=
+h:100%;" width=3D"118"></span></a></td></tr></tbody></table>
+ </td>
+ <td style=3D"width: 6px; line-height: 1px" width=3D"6">&nbsp;</td>=20
+ <td>
+ <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" style=3D"border-collapse:collapse;border-spacing:0px;"><tbody><tr><td s=
+tyle=3D"width:130px;"><a href=3D"https://play.google.com/store/apps/details=
+?id=3Dcom.patreon.android&amp;hl=3Den_US" style=3D"color:#000000;text-decor=
+ation:underline;" target=3D"_blank"><span style=3D"color:#000000;text-decor=
+ation:underline;"><img alt=3D"Get it on Google Play" height=3D"auto" src=3D=
+"https://c5.patreon.com/external/email/notify-new-post/badge_google_playsto=
+re@2x.png" style=3D"border:none;display:block;font-size:13px;height:auto;ou=
+tline:none;text-decoration:none;width:100%;" width=3D"130"></span></a></td>=
+</tr></tbody></table>
+ </td>
+ </tr>
+ </tbody>
+ </table>
+ </div></td></tr>=20
+ </tbody></table></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px 0px;text-align:center;vertical-align:top;"><!--[if mso | I=
+E]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"center" style=3D"font-size:0px;padding:10px 16px;w=
+ord-break:break-word;"><p style=3D"border-top-color:#cccccc;border-top-styl=
+e:solid;border-top-width:1px;font-size:1px;margin:0px auto;width:100%;"></p=
+><!--[if mso | IE]><table align=3D'center' border=3D'0' cellpadding=3D'0' c=
+ellspacing=3D'0' role=3D'presentation' style=3D'border-top-color:#cccccc;bo=
+rder-top-style:solid;border-top-width:1px;font-size:1px;margin:0px auto;wid=
+th:568px;' width=3D'568px'><tr><td style=3D'height:0;line-height:0;'>&nbsp<=
+/td></tr></table><![endif]--></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+=20
+=20
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px 0px;padding-bottom:0;text-align:center;vertical-align:top;=
+"><!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+=20
+=20
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;wor=
+d-break:break-word;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"border-collapse:collapse;border-spacing:0p=
+x;"><tbody><tr><td style=3D"width:100px;"><a href=3D"https://www.patreon.co=
+m/?utm_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medium=3Demail" st=
+yle=3D"color:#000000;text-decoration:underline;" target=3D"_blank"><span st=
+yle=3D"color:#000000;text-decoration:underline;"><img alt=3D"Patreon Wordma=
+rk" height=3D"auto" src=3D"https://c5.patreon.com/external/email/logo/patre=
+on_wordmark@2x.png" style=3D"border:none;display:block;font-size:13px;heigh=
+t:auto;outline:none;text-decoration:none;width:100%;" width=3D"100"></span>=
+</a></td></tr></tbody></table></td></tr>
+=20
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+ <!--[if mso | IE]>
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-si=
+ze:0px;mso-line-height-rule:exactly;">
+<![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:10px 0px;padding-top:0;text-align:center;vertical-align:top;"><=
+!--[if mso | IE]>
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0"><tr><td style=3D"vertical-align:top;width:600px;">
+<![endif]--><div class=3D"dys-column-per-100 outlook-group-fix" style=3D"di=
+rection:ltr;display:inline-block;font-size:13px;text-align:left;vertical-al=
+ign:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%">
+ <tbody><tr><td align=3D"left" style=3D"font-size:0px;padding:10px 16px;wor=
+d-break:break-word;"><div style=3D"color:#777777;font-family:'Oracle', sans=
+-serif;font-size:15px;font-weight:300;letter-spacing:0.32px;line-height:21p=
+x;text-align:left;">
+ 600 Townsend Street Suite 500<br>
+ San Francisco, CA 94103
+ <br><br>
+ This email was sent to <a href=3D"mailto:gautamabhijit0803@gmail.com" rel=
+=3D"noopener noreferrer" style=3D"color:#777777">gautamabhijit0803@gmail.co=
+m</a><br><a href=3D"https://www.patreon.com/settings/email/veritasium?utm_c=
+ampaign=3Dfree_member_digest&amp;utm_source=3Dmanage_email_settings&amp;utm=
+_id=3D1d73e47e-08bb-47f9-becc-9f8ef08c0a7a&amp;utm_medium=3Demail" rel=3D"n=
+oopener noreferrer" style=3D"color:#777777">Manage your email settings</a>
+ </div></td></tr>
+ </tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>
+</td></tr></table>
+<![endif]-->
+</div> <img width=3D"1" height=3D"1" alt=3D"" src=3D"http://email.mailgun.p=
+atreon.com/o/eJxsUk9v_SYQ_DTm5mixwcCBQ9qfcuutd4s_62fyDFiAU6WfvrLz-hopvbHMzL=
+LMjjXNrXPwGpDiKAfac-tYz9jEe7WMvrdSLc4uiqrFEHts9zlmjxqIM3E34ZZOsQBQA3E5RjNX3=
+E0xDf2859rm4KumgwIQCkQ3_E5HYCCm6ToPSvCRK0HcUVuOc8rJoX4riH9gtFh-hRvW1o2vdKTD=
+QBUV3fg6dePrAAMnXiNwpiTxOZqQ5vyBpQSPOpqw3Y70sptWMKcXlyNBTQVTlAkFQPBkzM8fJBN=
+Rt2JSNa6FnMz2YASvqRcjMoE9SGt7JhbVW3SuV4vEBaQDI8yDnXILy_zTl-9o-9xRPylfSMv7l1=
+fH7k3D-hDsJeQS2qfe8l_P4oHVz9ow6qvoK5aP4LBPR3o_3L2SVVOKRjIY7cJwWvhERyrRjBKop=
+4JzSYI-LYQJOJUDB3jx1DAhwEnFOVLrOgb_Z2Oo8xpu63_DASn6Zo5morFreA8NJIwdg9upviRn=
+GOYtxNCq7vhvHf9FCrqwB0xtruFvnO3h7tg0_XZ_-XRULKSu-dj87FaTEm5zW0tubUP9ZraK_6L=
+xG_BnOZA03TDu2_n0UhDjFSd_xYk0U-_ndgYA67ww_TII3zNpWK-shN5K4ZYJR8cpkmebKyQ_ep=
+0jXjGZRkrloBj50MM_AQAA___LqiKN"></body></html>

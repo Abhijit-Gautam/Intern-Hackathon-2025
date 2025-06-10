@@ -1,0 +1,43 @@
+{
+  "email_metadata": {
+    "sender": "('Poonam Mehdiratta', 'Programs-India@weconnectinternational.org')",
+    "subject": "REMINDER : EMPOWERING INCLUSION SUMMIT: 27 FEB  : THE LALIT ASHOK\n HOTEL, BENGALURU",
+    "date": "2024-02-26 03:44:56",
+    "filename": "sample1.eml"
+  },
+  "email_summary": "we are looking forward to your valued participation and presence at the Empowering Inclusion India Summit. we are looking forward to your valued participation and presence at the Empowering Inclusion India Summit.",
+  "document_summaries": [
+    {
+      "filename": "image001.png",
+      "content_type": "image/png",
+      "summary": "Document contains minimal text or could not be processed.",
+      "word_count": 0
+    },
+    {
+      "filename": "image002.jpg",
+      "content_type": "image/jpeg",
+      "summary": "Document contains minimal text or could not be processed.",
+      "word_count": 0
+    },
+    {
+      "filename": "Agenda- Advancing Sustainable Value Chains Summit- India 2024.pdf",
+      "content_type": "application/pdf",
+      "summary": "WEConnect International host an \"Inclusive Supply Chain Summit\" with three in person events aligned with the program's objectives. the summit will feature experts in critical emerging industry sectors such as IT, semiconductors, pharmaceuticals.",
+      "word_count": 1542
+    }
+  ],
+  "key_entities": [
+    "international",
+    "weconnect",
+    "business",
+    "women",
+    "inclusive",
+    "global",
+    "india",
+    "chains",
+    "government",
+    "supplier"
+  ],
+  "total_attachments": 3,
+  "processed_documents": 3
+}

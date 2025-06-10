@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Processing Agent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .results {
+            margin-top: 30px;
+        }
+        .email-summary {
+            border: 1px solid #ddd;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+        .metadata {
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .summary-text {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.5;
+        }
+        .document-summary {
+            background: #e8f4f8;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+            border-left: 4px solid #007bff;
+        }
+        .loading {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+        }
+        .error {
+            color: #dc3545;
+            background: #f8d7da;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .success {
+            color: #155724;
+            background: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .entities {
+            background: #fff3cd;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .entity-tag {
+            display: inline-block;
+            background: #ffc107;
+            color: #212529;
+            padding: 2px 8px;
+            margin: 2px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📬 Email Processing Agent</h1>
+        <p>Process emails and extract summaries from attachments using AI.</p>
+        
+        <button id="processBtn" class="btn" onclick="processEmails()">
+            🚀 Process Emails
+        </button>
+        
+        <button id="loadResultsBtn" class="btn" onclick="loadResults()">
+            📄 Load Previous Results
+        </button>
+        
+        <div id="status"></div>
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        async function processEmails() {
+            const btn = document.getElementById('processBtn');
+            const status = document.getElementById('status');
+            const results = document.getElementById('results');
+            
+            btn.disabled = true;
+            btn.textContent = '⏳ Processing...';
+            status.innerHTML = '<div class="loading">Processing emails... This may take a few minutes.</div>';
+            results.innerHTML = '';
+            
+            try {
+                const response = await fetch('/api/process', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (data.status === 'success') {
+                    status.innerHTML = `<div class="success">✅ Successfully processed ${data.processed_count} emails!</div>`;
+                    displayResults(data.results);
+                } else {
+                    status.innerHTML = `<div class="error">❌ Error: ${data.message}</div>`;
+                }
+            } catch (error) {
+                status.innerHTML = `<div class="error">❌ Network error: ${error.message}</div>`;
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '🚀 Process Emails';
+            }
+        }
+        
+        async function loadResults() {
+            const status = document.getElementById('status');
+            const results = document.getElementById('results');
+            
+            status.innerHTML = '<div class="loading">Loading previous results...</div>';
+            
+            try {
+                const response = await fetch('/api/results');
+                const data = await response.json();
+                
+                if (data.length > 0) {
+                    status.innerHTML = `<div class="success">📊 Loaded ${data.length} previous results</div>`;
+                    displayResults(data);
+                } else {
+                    status.innerHTML = '<div class="loading">No previous results found. Process some emails first!</div>';
+                }
+            } catch (error) {
+                status.innerHTML = `<div class="error">❌ Error loading results: ${error.message}</div>`;
+            }
+        }
+        
+        function displayResults(resultsData) {
+            const resultsDiv = document.getElementById('results');
+            
+            if (resultsData.length === 0) {
+                resultsDiv.innerHTML = '<p>No results to display.</p>';
+                return;
+            }
+            
+            let html = '<h2>📋 Processing Results</h2>';
+            
+            resultsData.forEach((result, index) => {
+                const summary = result.summary;
+                html += `
+                    <div class="email-summary">
+                        <h3>📧 Email ${index + 1}: ${result.email_filename}</h3>
+                        
+                        <div class="metadata">
+                            <strong>From:</strong> ${summary.email_metadata.sender}<br>
+                            <strong>Subject:</strong> ${summary.email_metadata.subject}<br>
+                            <strong>Date:</strong> ${summary.email_metadata.date}<br>
+                            <strong>Attachments:</strong> ${summary.total_attachments} | 
+                            <strong>Processed Documents:</strong> ${summary.processed_documents}
+                        </div>
+                        
+                        <div class="summary-text">
+                            <h4>📝 Email Summary:</h4>
+                            <p>${summary.email_summary}</p>
+                        </div>
+                        
+                        ${summary.document_summaries.length > 0 ? `
+                            <h4>📄 Document Summaries:</h4>
+                            ${summary.document_summaries.map(doc => `
+                                <div class="document-summary">
+                                    <strong>📎 ${doc.filename}</strong> (${doc.content_type})<br>
+                                    <em>Words: ${doc.word_count}</em><br>
+                                    ${doc.summary}
+                                </div>
+                            `).join('')}
+                        ` : ''}
+                        
+                        ${summary.key_entities.length > 0 ? `
+                            <div class="entities">
+                                <h4>🔑 Key Entities:</h4>
+                                ${summary.key_entities.map(entity => `<span class="entity-tag">${entity}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+            
+            resultsDiv.innerHTML = html;
+        }
+        
+        // Load results on page load
+        window.onload = function() {
+            loadResults();
+        };
+    </script>
+</body>
+</html>
